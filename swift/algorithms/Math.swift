@@ -12,17 +12,11 @@ func gcd(_ a: Int, _ b: Int) -> Int {
     let a = abs(a), b = abs(b)
     return b > 0 ? gcd(b, a % b) : a
 }
-print(gcd(6, 2))
-print(gcd(6, 0))
-print(gcd(3, 2))
-print(gcd(6, -2))
 
 func lcm(_ a: Int, _ b: Int) -> Int {
     return a * b / gcd(a, b)
 }
 
-print(lcm(4, 6))
-print(lcm(3, 8))
 
 
 
@@ -93,10 +87,6 @@ func factorFreq(_ k: Int) -> [Int: Int] {
     return mp
 }
 
-print(factorFreq(30))
-print(factorFreq(280))
-print(factorFreq(1024))
-print(factorFreq(Int(1e9+7)))
 
 // MARK: - set of distint factors of num
 func factorSet(_ num: Int) -> Set<Int> {

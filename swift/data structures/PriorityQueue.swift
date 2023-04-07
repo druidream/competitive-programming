@@ -87,10 +87,3 @@ struct PriorityQueue<T> {
         }
     }
 }
-
-// Testing
-var heap = PriorityQueue(sort: >, items: [1,12,3,4,1,6,8,7])
-
-while !heap.isEmpty {
-  print(heap.remove()!)
-}
