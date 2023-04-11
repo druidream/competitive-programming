@@ -14,6 +14,8 @@
 		F1B6A41029A3579100489E1E /* FenwickTreeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B6A40F29A3579100489E1E /* FenwickTreeTest.swift */; };
 		F1B6A41129A357C200489E1E /* FenwickTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AD10D229A324850088744A /* FenwickTree.swift */; };
 		F1D38E9129E422BD00641340 /* primes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D38E9029E422BD00641340 /* primes.swift */; };
+		F1D38EA629E54BED00641340 /* PrimesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D38EA529E54BED00641340 /* PrimesTest.swift */; };
+		F1D38EA729E557C700641340 /* primes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D38E9029E422BD00641340 /* primes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,6 +38,7 @@
 		F1AD10D229A324850088744A /* FenwickTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FenwickTree.swift; sourceTree = "<group>"; };
 		F1B6A40F29A3579100489E1E /* FenwickTreeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FenwickTreeTest.swift; sourceTree = "<group>"; };
 		F1D38E9029E422BD00641340 /* primes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = primes.swift; sourceTree = "<group>"; };
+		F1D38EA529E54BED00641340 /* PrimesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimesTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,7 @@
 			children = (
 				F1B6A40F29A3579100489E1E /* FenwickTreeTest.swift */,
 				F1AD10CF29A30F200088744A /* SegmentTreeTest.swift */,
+				F1D38EA529E54BED00641340 /* PrimesTest.swift */,
 			);
 			path = "cpbook-swift-ut";
 			sourceTree = "<group>";
@@ -194,8 +198,10 @@
 			files = (
 				F1AD10D029A30F200088744A /* SegmentTreeTest.swift in Sources */,
 				F1B6A41129A357C200489E1E /* FenwickTree.swift in Sources */,
+				F1D38EA629E54BED00641340 /* PrimesTest.swift in Sources */,
 				F1AD10D129A323080088744A /* SegmentTree.swift in Sources */,
 				F1B6A41029A3579100489E1E /* FenwickTreeTest.swift in Sources */,
+				F1D38EA729E557C700641340 /* primes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
