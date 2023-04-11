@@ -91,3 +91,16 @@ func EulerPhi(_ n: Int) -> Int {
     if n != 1 { ans -= ans / n }
     return ans
 }
+
+func extEuclid(_ a: Int, _ b: Int, _ x: inout Int, _ y: inout Int) -> Int {
+    y = 0; x = 1
+    var xx = y, yy = x
+    var a = a, b = b
+    while b > 0 {
+        let q = a / b
+        (a, b) = (b, a % b)
+        (xx, x) = (x - q * xx, xx)
+        (yy, y) = (y - q * yy, yy)
+    }
+    return a
+}
