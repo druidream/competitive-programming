@@ -13,6 +13,7 @@
 		F1AD10D329A324850088744A /* FenwickTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AD10D229A324850088744A /* FenwickTree.swift */; };
 		F1B6A41029A3579100489E1E /* FenwickTreeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B6A40F29A3579100489E1E /* FenwickTreeTest.swift */; };
 		F1B6A41129A357C200489E1E /* FenwickTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AD10D229A324850088744A /* FenwickTree.swift */; };
+		F1D38E9129E422BD00641340 /* primes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D38E9029E422BD00641340 /* primes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,7 @@
 		F1AD10CF29A30F200088744A /* SegmentTreeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentTreeTest.swift; sourceTree = "<group>"; };
 		F1AD10D229A324850088744A /* FenwickTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FenwickTree.swift; sourceTree = "<group>"; };
 		F1B6A40F29A3579100489E1E /* FenwickTreeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FenwickTreeTest.swift; sourceTree = "<group>"; };
+		F1D38E9029E422BD00641340 /* primes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = primes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				F1AD10D229A324850088744A /* FenwickTree.swift */,
 				F1AD10C229A30E900088744A /* SegmentTree.swift */,
+				F1D38E9029E422BD00641340 /* primes.swift */,
 			);
 			path = "cpbook-swift";
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			files = (
 				F1AD10D329A324850088744A /* FenwickTree.swift in Sources */,
 				F1AD10C329A30E900088744A /* SegmentTree.swift in Sources */,
+				F1D38E9129E422BD00641340 /* primes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
