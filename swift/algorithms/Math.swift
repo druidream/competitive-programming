@@ -106,13 +106,13 @@ func factorSet(_ num: Int) -> Set<Int> {
 }
 
 // MARK: - if num is a prime number (1 is not a prime number)
+// https://www.bilibili.com/video/BV1iN411w7my
 func isPrime(_ num: Int) -> Bool {
-    if num == 1 { return false }
-    var x = num
-    for f in 2..<num {
-        if f * f > num { break }
-        if x % f == 0 { return false }
+    var i = 2
+    while i * i <= num {
+        if num % i == 0 { return false }
+        i += 1
     }
-    return true
+    return num >= 2
 }
 
