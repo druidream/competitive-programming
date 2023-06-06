@@ -10,6 +10,13 @@ using namespace std;
 #define printBool(x) cout << (x ? "Yes" : "No") << '\n';
 #define printInline(a) rep(i, a.size()) cout << a[i] << ' '; cout << '\n';
 
+double EPS = 1e-9;
+int INF = 0x3f3f3f3f;
+long long INFF = 1000000000000000005LL;
+double PI = acos(-1);
+int dirx[8] = {-1,0,0,1,-1,-1,1,1};
+int diry[8] = {0,1,-1,0,-1,1,-1,1};
+
 typedef long long ll;
 typedef vector<ll> vll;
 typedef vector<int> vi;
