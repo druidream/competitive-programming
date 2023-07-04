@@ -21,6 +21,10 @@ typedef long long ll;
 typedef vector<ll> vll;
 typedef vector<int> vi;
 
+void solve() {
+    
+}
+
 int main() {
     #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
@@ -29,8 +33,7 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
     int T; cin >> T;
-    while (T--) {
-
-    }
+    while (T--)
+        solve();
     return 0;
 }
