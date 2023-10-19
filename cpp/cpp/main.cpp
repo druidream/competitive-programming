@@ -16,10 +16,12 @@ long long INFF = 1000000000000000005LL;
 double PI = acos(-1);
 int dirx[8] = {-1,0,0,1,-1,-1,1,1};
 int diry[8] = {0,1,-1,0,-1,1,-1,1};
+// const int mod = 998244353;
 
 typedef long long ll;
 typedef vector<ll> vll;
 typedef vector<int> vi;
+typedef pair<int, int> pii;
 
 void solve() {
     
@@ -32,7 +34,8 @@ int main() {
     #endif
     ios::sync_with_stdio(false);
     cin.tie(0);
-    int T; cin >> T;
+    int T = 1;
+    cin >> T;
     while (T--)
         solve();
     return 0;
