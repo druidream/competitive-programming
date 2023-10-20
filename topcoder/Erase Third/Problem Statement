@@ -1,0 +1,66 @@
+Problem Statement
+Suppose we have a string of two or more characters. We can divide it into thirds as follows:
+
+let L be the length of the string, and let X = ceiling(L/3), i.e., L/3 rounded up to the nearest integer
+the first third of the string is formed by its first X letters
+its last (third) third is formed by its last X letters
+its middle (second) third is formed by all the other letters
+For example, we would split "potato" into "po"+"ta"+"to", "example" into "exa"+"m"+"ple", and "topcoder" into "top"+"co"+"der".
+
+
+Let '1', '2', and '3' denote the operations "erase the first/second/third third of a string".
+
+For example, if you have the string "topcoder", operation '1' produces "coder", operation '2' produces "topder", and operation '3' produces "topco".
+
+
+Reduction of a string is the process in which we take the string and repeatedly choose and erase a non-empty third of the string until we are left with exactly one letter. The description of a reduction is a string of characters '1', '2', and '3' describing the parts that were erased during the operation, in order.
+
+For example, we may reduce the string "topcoder" as follows:
+
+The current string is "topcoder" = "top" + "co" + "der". We choose and erase the first third ('1').
+The current string is "coder" = "co" + "d" + "er". We choose and erase the third third ('3').
+The current string is "cod" = "c" + "o" + "d". We choose and erase the second third ('2').
+The current string is "cd" = "c" + "" + "d". We choose and erase the first third ('1').
+As we are left with a single letter ("d"), the process terminates.
+The description of the above reduction is the string "1321".
+
+
+Given is a string S of lowercase English letters. For each letter of the lowercase English alphabet (from 'a' to 'z'), determine whether we can reduce S to that letter. If yes, the answer for that letter is any one description of such a reduction. If no, the answer for that letter is the string "NO".
+
+Return a with 26 elements: for each letter from 'a' to 'z', in order, the answer for that letter.
+
+Definition
+Class: EraseThird
+Method: erase
+Parameters: string
+Returns: vector <string>
+Method signature: vector <string> erase(string S)
+(be sure your method is public)
+Limits
+Time limit (s): 2.000
+Memory limit (MB): 256
+Notes
+- Sometimes the middle third of a string can be empty. Pay attention to the requirement that while reducing a string you must pick a non-empty third to erase in each step.
+- If there are multiple ways to reduce a string to a specific letter, you may choose and return any one of them.
+Constraints
+- S will have between 1 and 1,000 characters, inclusive.
+- Each character of S will be a lowercase English letter ('a'-'z').
+Examples
+0)
+"topcoder"
+Returns: {"NO", "NO", "1233", "1321", "1113", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "1231", "3123", "NO", "1111", "NO", "3233", "NO", "NO", "NO", "NO", "NO", "NO" }
+Clearly, letters that don't appear in "topcoder" cannot be obtained by erasing. In this test case each other letter can be obtained, as shown by the return value. Two reductions described by the example output are illustrated below.
+
+The reduction that produces "d" is the one described in detail in the problem statement. The reduction that produces "c" has the description "1233". This reduction proceeds as follows: "topcoder" -> "coder" -> "coer" -> "co" -> "c".
+
+1)
+"x"
+Returns: {"NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "", "NO", "NO" }
+We can reduce "x" to "x" by doing nothing. The description of doing nothing is the empty string. We cannot reduce "x" to any other letter.
+2)
+"qwertyuiopasdfghjkl"
+Returns: {"131233", "NO", "NO", "113231", "232133", "113123", "111233", "111231", "133233", "111123", "111113", "111111", "NO", "NO", "133231", "133123", "232333", "231333", "113233", "231331", "212331", "NO", "232331", "NO", "212333", "NO" }
+3)
+"aaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaa"
+Returns: {"1111111", "1213333", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO" }
+This problem statement is the exclusive and proprietary property of TopCoder, Inc. Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited. (c)2003, TopCoder, Inc. All rights reserved.

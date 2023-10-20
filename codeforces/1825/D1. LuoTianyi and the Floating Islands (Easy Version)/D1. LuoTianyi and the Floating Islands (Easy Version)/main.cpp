@@ -1,0 +1,50 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+#define rep(i, n) for (int i = 0; i < n; i++)
+#define Rep(i, x, n) for (int i = x; i < n; i++)
+#define rev(i, n) for (int i = n - 1; i >= 0; i--)
+#define LSOne(S) ((S) & (-S))
+#define roundUp(a, b) ((a + b - 1) / b)
+#define print(x) cout << x << '\n';
+#define printBool(x) cout << (x ? "Yes" : "No") << '\n';
+#define printInline(a) rep(i, a.size()) cout << a[i] << ' '; cout << '\n';
+
+double EPS = 1e-9;
+int INF = 0x3f3f3f3f;
+long long INFF = 1000000000000000005LL;
+double PI = acos(-1);
+int dirx[8] = {-1,0,0,1,-1,-1,1,1};
+int diry[8] = {0,1,-1,0,-1,1,-1,1};
+
+typedef long long ll;
+typedef vector<ll> vll;
+typedef vector<int> vi;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+    int n, k; cin >> n >> k;
+    vector<vector<int>> g(n + 1, vector<int>());
+    rep(i, n - 1) {
+        int a, b; cin >> a >> b;
+        g[a].push_back(b);
+        g[b].push_back(a);
+    }
+    int tot = 0;
+    function<int(int, int)> dfs = [&](int x, int pa) -> int {
+        int cnt = 1;
+        for (auto y : g[x]) {
+            if (y == pa) continue;
+            int t = dfs(y, x);
+            cout << x << ' ' << pa << ' ' << t << endl;
+            tot += t * (n - t - 1);
+            cnt += t;
+        }
+        return cnt;
+    };
+    dfs(1, -1);
+    tot += n * (n - 1);
+    print(tot)
+    return 0;
+}
