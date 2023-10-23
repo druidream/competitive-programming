@@ -26,8 +26,9 @@ typedef long long ll;
 typedef vector<ll> vll;
 typedef vector<int> vi;
 typedef pair<int, int> pii;
+typedef pair<ll, ll> pll;
 
-void XYZ() {
+void binarySearch() {
     int n; cin >> n;
     vll a(n), b(n);
     rep(i, n) cin >> a[i];
@@ -53,6 +54,28 @@ void XYZ() {
     print(lo)
 }
 
+void sorting() {
+    int n; cin >> n;
+    vector<pll> a(n);
+    ll sum = 0;
+    rep(i, n) {
+        ll x; cin >> x;
+        a[i].first = x;
+    }
+    rep(i, n) {
+        cin >> a[i].second;
+        sum += a[i].second;
+    }
+    sort(a.begin(), a.end());
+    ll ans = sum;
+    rep(i, n) {
+        sum -= a[i].second;
+        ll cur = max(a[i].first, sum);
+        ans = min(ans, cur);
+    }
+    print(ans)
+}
+
 int main() {
     #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
@@ -63,6 +86,6 @@ int main() {
     int T = 1;
     cin >> T;
     while (T--)
-        XYZ();
+        sorting();
     return 0;
 }
