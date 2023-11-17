@@ -23,20 +23,20 @@ typedef vector<ll> vll;
 typedef vector<int> vi;
 typedef pair<int, int> pii;
 
-void solve() {
+void placeholder() {
     
 }
 
 int main() {
     #ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
+    freopen("placeholder.in", "r", stdin);
+    freopen("placeholder.out", "w", stdout);
     #endif
     ios::sync_with_stdio(false);
     cin.tie(0);
     int T = 1;
     cin >> T;
     while (T--)
-        solve();
+        placeholder();
     return 0;
 }
